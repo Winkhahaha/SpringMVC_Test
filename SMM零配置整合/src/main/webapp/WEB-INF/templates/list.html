@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="2">
+    <thead>
+    <tr>
+        <th>编号</th>
+        <th>名称</th>
+        <th>价格</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="good:${goods}">
+        <td th:text="${good.gid}"></td>
+        <td th:text="${good.gname}">
+        <td th:text="${good.price}"></td>
+        <!--<td th:text="${#dates.format(emp.birth, 'yyyy-MM-dd HH:mm')}"></td>-->
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
